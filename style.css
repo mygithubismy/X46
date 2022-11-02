@@ -1,0 +1,102 @@
+:root{
+    --back1: rgb(240, 174, 153);
+    --black: black;;
+    --btnBack: rgb(138, 43, 226);
+    --shadow: rgba(150, 30, 255, 0.7);
+    --shadow2: rgba(59, 210, 255, 0.7);
+}
+
+.container{
+    width: 99%;
+    height: 99vh;
+    font-size: 24px;
+    border-radius: 2rem;
+    color: var(--black);
+    background-image: url(./animation-1.svg);
+    background-color: var(--back1);
+    margin: auto;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.btn{
+    font-family: sans-serif;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 23px;
+    left: 4px;
+    width: 100px;
+    height: 35px;
+    padding-top: 4px;
+    border-radius: 5px;
+    background-color: var(--btnBack);
+    box-shadow: var(--shadow) 4px 6px;
+}
+
+#btn-1{
+    margin-left: 30%;
+    transition: all 1.7s ease-in-out 0.16s;
+}
+#btn-1:hover, :focus{
+    background-color: rgb(43, 226, 128);
+    box-shadow: var(--shadow2)
+}
+#btn-2{
+    margin-left: 30%;
+    transition: all 1s ease-in-out 0.1s;
+}
+#btn-2:hover, :focus{box-shadow: var(--shadow) -4px -6px}
+#btn-3{
+    margin-left: 30%;
+    transition: all 1s ease-in-out 0s;
+}
+#btn-3:hover, :focus{
+    transform: scale(1.4);
+    box-shadow: var(--shadow) 0px 0px;
+    color: wheat;
+}
+#btn-4{
+    margin-left: 30%;
+    transition: all 2s ease-in-out 0.1s;
+}
+#btn-4:hover, :focus{
+    transform: rotate(180deg);
+    box-shadow: var(--shadow2) -4px -6px;
+}
+
+.main-2{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    width: 98%;
+    position: relative;
+    top: 50px;
+    left: 7px;
+}
+
+@keyframes anime{
+    0%{left: 0%;}
+    50%{left: 95.5%;}
+    100%{left: 0%;}
+}
+
+.obj{
+    border-radius: 7px;
+    width: 50px;
+    height: 70px;
+    position: relative;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#obj-1{background-color: rgba(230, 120, 60, 0.6);}
+#obj-2{background-color: rgba(255, 140, 0, 0.6);}
+#obj-3{background-color: rgba(60, 230, 120, 0.6);}
+#obj-4{background-color: rgba(120, 60, 230, 0.6);}
+#obj-5{background-color: rgba(60, 120, 230, 0.6);}
